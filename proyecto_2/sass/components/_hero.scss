@@ -1,0 +1,42 @@
+@use "../abstracts/abstracts" as *;
+.hero {
+    padding-top:40px;
+    padding-bottom:40px;
+    margin-bottom: 100px;
+    &__title {
+        margin-bottom: 20px;
+    }
+    &__description {
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+    &__button {
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        gap:20px;
+        .btn {
+            @include button();
+            background-color: $bg-button;
+            font-size:$size-button;
+            color:$color-title;
+            transition: transform 0.3s ease;
+            &:hover {
+                transform:scale(1.15);
+            }
+        }
+        .link {
+            font-size:$size-button;
+            color:$color-title;
+            &::after {
+            content:url(../../img/arrow.svg);
+            vertical-align: middle;
+        }
+        &:hover {
+                text-decoration: underline;
+                text-underline-offset: 5px;
+            }
+
+    }
+}
+}

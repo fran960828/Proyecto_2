@@ -1,0 +1,21 @@
+@use "../abstracts/abstracts" as *;
+h1{
+    font-family: $font-title;
+    font-size: $size-title;
+    color: $color-title;
+}
+p {
+    font-family: $font-text;
+    font-size: $size-text;
+    color: $color-text;
+}
+h3 {
+    font-family: $font-text;
+    font-size: $size-text;
+    color: $color-title;
+}
+a {
+    font-family: $font-text;
+    font-size: $size-button;
+    text-decoration: none;
+}

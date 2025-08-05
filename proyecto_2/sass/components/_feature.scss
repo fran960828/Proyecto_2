@@ -1,0 +1,24 @@
+@use "../abstracts/abstracts" as *;
+.feature {
+    display:flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap:20px;
+    &__item{
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        gap:5px;
+        h3 {
+            width: 40%;
+            font-weight: 500;
+            font-size: $size-button;
+        }
+        img {
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #464751;
+        }
+    }
+}

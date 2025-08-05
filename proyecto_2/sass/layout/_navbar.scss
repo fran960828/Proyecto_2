@@ -1,0 +1,28 @@
+@use "../abstracts/abstracts" as *;
+.menu {
+    &__list {
+        @include reset-list();
+        margin-right: 60px;
+    }
+    &__item a {
+        color: #ababab;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px; /* o ajusta con offset si quieres separarlo */
+            width: 0; /* Inicia sin ancho */
+            height: 3px; /* Grosor de la línea */
+            background:$bg-button;
+            transition: width 0.1s ease;
+        }
+        &:hover::after {
+            width: 60%;
+
+        }
+        &:hover {
+            color: $color-title;
+        }
+    }
+}
